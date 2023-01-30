@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import { PhoneBookForm } from './PhoneBook/PhoneBook';
-import { Formik } from 'formik';
 import { Filter } from './Filter/Filter';
 import { PhoneBookList } from './PhoneBookList/PhoneBookList';
 import { nanoid } from 'nanoid';
@@ -36,7 +35,6 @@ export class App extends Component {
     });
 
   render() {
-    console.log(this.state.contacts);
     const { contacts, filter } = this.state;
     const normalizeFilter = filter.toLowerCase();
     const filteredContacts = contacts.filter(item =>
